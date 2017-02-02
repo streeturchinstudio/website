@@ -36,7 +36,9 @@
         infinite: true,
         speed: 500,
         fade: true,
-        cssEase: 'linear'
+        cssEase: 'linear',
+        adaptiveHeight: true,
+        touchMove: true
       });
 
 })(jQuery); // End of use strict
