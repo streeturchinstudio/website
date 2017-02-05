@@ -19,7 +19,7 @@
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function(){ 
+    $('.navbar-collapse ul li a').click(function(){
             $('.navbar-toggle:visible').click();
     });
 
@@ -31,14 +31,22 @@
     })
 
     // Initialize the Carousel
-    $('.project-carousel').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
-        adaptiveHeight: true,
-        touchMove: true
-      });
+    $('.modal').on('shown.bs.modal', function (e) {
+        console.log("init slick");
+        $(this).find('.project-carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            lazyLoad: 'ondemand',
+            touchMove: true
+        });
+    });
+
+    $('.modal').on('hidden.bs.modal', function(e) {
+        console.log("close slick");
+        $(this).find('.project-carousel').slick('unslick');
+    });
 
 })(jQuery); // End of use strict

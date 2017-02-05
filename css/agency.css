@@ -394,6 +394,32 @@ section h3.section-subheading {
     margin: 0 0 30px;
   }
 }
+
+.project-carousel-container {
+/*    margin: auto;
+    width: 50%;
+*/
+    display: inline-block;
+    overflow-x: auto;
+    /*border: 1px solid black;*/
+    padding: 30px;
+}
+.project-carousel {
+    margin: auto;
+    width: 600px;
+    /*border: 3px solid grey;*/
+    padding: 2px;
+}
+.slick-slide > .image {
+    display: block;
+    margin: auto;
+}
+.slick-slide img {
+  display: block;
+  margin: auto;
+}
+
+
 .timeline {
   list-style: none;
   padding: 0;
@@ -685,6 +711,12 @@ ul.social-buttons li a:active {
   height: 100%;
   width: auto;
 }
+.modal-header {
+  text-align: center;
+}
+.modal-body {
+  text-align: justify;
+}
 .portfolio-modal .modal-content {
   border-radius: 0;
   background-clip: border-box;
@@ -762,6 +794,7 @@ ul.social-buttons li a:active {
   text-shadow: none;
   background: #fed136;
 }
+
 img::selection {
   background: transparent;
 }
